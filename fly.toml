@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for fullstackopen-relational on 2023-09-18T12:23:59+02:00
+# fly.toml app configuration file generated for fs-postgres on 2023-09-22T15:20:39+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "fullstackopen-relational"
-primary_region = "arn"
+app = "fs-postgres"
+primary_region = "ams"
 
 [build]
 
