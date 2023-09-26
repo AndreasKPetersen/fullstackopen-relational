@@ -1,8 +1,9 @@
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImV4YW1wbGVAbWFpbC5jb20iLCJpZCI6MSwiaWF0IjoxNjk1NzIwODIyfQ.hHzqB4WCetnlLz6TLtjLJzRjL_z6bVoAKFEI_PU3gig
 
 {
-    "author": "Dan AbramovS", 
-    "url": "example.com!", 
-    "title": "On let vs const!"
+    "author": "Does this work?", 
+    "url": "Let's go!", 
+    "title": "Success in backend dev"
 }

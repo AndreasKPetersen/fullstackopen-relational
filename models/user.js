@@ -16,8 +16,14 @@ User.init(
     },
     username: {
       type: DataTypes.TEXT,
-      unique: true,
       allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: {
+          args: true,
+          msg: "Validation isEmail on username failed",
+        },
+      },
     },
   },
   {
