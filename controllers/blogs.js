@@ -24,9 +24,20 @@ router.get("/", async (req, res) => {
   const where = {};
 
   if (req.query.search) {
-    where.title = {
-      [Op.substring]: req.query.search,
-    };
+    const searchTerm = req.query.search.toLowerCase(); // Convert the search term to lowercase
+
+    where[Op.or] = [
+      {
+        title: {
+          [Op.iLike]: `%${searchTerm}%`, // Use Op.iLike for case-insensitive search
+        },
+      },
+      {
+        author: {
+          [Op.iLike]: `%${searchTerm}%`, // Use Op.iLike for case-insensitive search
+        },
+      },
+    ];
   }
 
   const blogs = await Blog.findAll({
